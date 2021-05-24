@@ -1,0 +1,36 @@
+[2021-05-24 03:30:37] production.ERROR: Failed opening required 'database.php' (include_path='.:/usr/local/lib/php') {"exception":"[object] (Error(code: 0): Failed opening required 'database.php' (include_path='.:/usr/local/lib/php') at /var/www/routes/web.php:16)
+[stacktrace]
+#0 /var/www/bootstrap/app.php(112): require()
+#1 /var/www/vendor/laravel/lumen-framework/src/Routing/Router.php(62): {closure}(Object(Laravel\\Lumen\\Routing\\Router))
+#2 /var/www/bootstrap/app.php(113): Laravel\\Lumen\\Routing\\Router->group(Array, Object(Closure))
+#3 /var/www/public/index.php(14): require('/var/www/bootst...')
+#4 {main}
+
+[previous exception] [object] (ErrorException(code: 0): require_once(database.php): Failed to open stream: No such file or directory at /var/www/routes/web.php:16)
+[stacktrace]
+#0 /var/www/routes/web.php(16): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(2, 'require_once(da...', '/var/www/routes...', 16)
+#1 /var/www/routes/web.php(16): require_once()
+#2 /var/www/bootstrap/app.php(112): require('/var/www/routes...')
+#3 /var/www/vendor/laravel/lumen-framework/src/Routing/Router.php(62): {closure}(Object(Laravel\\Lumen\\Routing\\Router))
+#4 /var/www/bootstrap/app.php(113): Laravel\\Lumen\\Routing\\Router->group(Array, Object(Closure))
+#5 /var/www/public/index.php(14): require('/var/www/bootst...')
+#6 {main}
+"} 
+[2021-05-24 03:44:01] production.ERROR: Failed opening required 'database.php' (include_path='.:/usr/local/lib/php') {"exception":"[object] (Error(code: 0): Failed opening required 'database.php' (include_path='.:/usr/local/lib/php') at /var/www/routes/web.php:16)
+[stacktrace]
+#0 /var/www/bootstrap/app.php(112): require()
+#1 /var/www/vendor/laravel/lumen-framework/src/Routing/Router.php(62): {closure}(Object(Laravel\\Lumen\\Routing\\Router))
+#2 /var/www/bootstrap/app.php(113): Laravel\\Lumen\\Routing\\Router->group(Array, Object(Closure))
+#3 /var/www/public/index.php(14): require('/var/www/bootst...')
+#4 {main}
+
+[previous exception] [object] (ErrorException(code: 0): require_once(database.php): Failed to open stream: No such file or directory at /var/www/routes/web.php:16)
+[stacktrace]
+#0 /var/www/routes/web.php(16): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(2, 'require_once(da...', '/var/www/routes...', 16)
+#1 /var/www/routes/web.php(16): require_once()
+#2 /var/www/bootstrap/app.php(112): require('/var/www/routes...')
+#3 /var/www/vendor/laravel/lumen-framework/src/Routing/Router.php(62): {closure}(Object(Laravel\\Lumen\\Routing\\Router))
+#4 /var/www/bootstrap/app.php(113): Laravel\\Lumen\\Routing\\Router->group(Array, Object(Closure))
+#5 /var/www/public/index.php(14): require('/var/www/bootst...')
+#6 {main}
+"} 
