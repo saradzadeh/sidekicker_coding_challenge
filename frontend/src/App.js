@@ -11,18 +11,28 @@ import './App.css';
     constructor(props) {
       super(props);
   
-      this.state = { jobTitle:'', jobDescription:'', date:'', location:'', applicants: '' };
+      this.state = { jobTitle:'', jobDescription:'', date:'' };
+
+      this.handleClick = this.handleClick.bind(this)
     }
 
-    componentDidMount(){
+    // componentDidMount(){
       
-      //get request
-      fetch('http://localhost/jobs.php')
-      .then(res => res.json())
-      .then( json => {
-        this.setState({jobTitle: res.jobTitle, jobDescription: res.jobDescription, date: res.date, location: res.location, applicants: res.applicants
-        }); 
-      });
+    //   //get request
+    //   fetch('http://localhost/jobs.php')
+    //   .then(res => res.json())
+    //   .then( json => {
+    //     this.setState({jobTitle: res.jobTitle, jobDescription: res.jobDescription, date: res.date, location: res.location, applicants: res.applicants
+    //     }); 
+    //   });
+    // }
+
+    
+
+    handleClick () {
+      this.setState ({
+        location:'Melbourne', applicants: 'Sara'
+      })
     }
 
     
@@ -34,36 +44,18 @@ import './App.css';
             <h1>JOB LISTS</h1>
           </header>
 
-          <table class="table table-hover">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>jobTitle</th>
-              <th>jobDescription</th>
-              <th>date</th>
-              <th>location</th>
-              <th>applicants</th>
-            </tr>
-          </thead>
-          <tbody>
-          {this.state.data.map((result) => {
-            return (
-             
-                 <tr>
-                  <td>{result.id}</td>
-                  <td>{result.jobTitle}</td>
-                  <td>{result.jobDescription}</td>
-                  <td>{result.date}</td>
-                  <td>{result.location}</td>
-                  <td>{result.applicants}</td>
-                </tr>
-             
-            )
-          })}
-           
-            
-          </tbody>
-        </table>
+          <main>
+            <h3 onClick = {this.handleClick}>Job Title</h3>
+            <h2>{this.state.jobTitle}</h2>
+            <h3>Job Description</h3>
+            <p>{this.state.jobDescription}</p>
+            <h3>Date</h3>
+            <p>{this.state.date}</p>
+            <h3>Location</h3>
+            <p>{this.state.location}</p>
+            <h3>Applicants</h3>
+            <p>{this.state.applicants}</p>
+          </main>
 
           <footer className="footer">
             <p>This is the footer of the page</p>
