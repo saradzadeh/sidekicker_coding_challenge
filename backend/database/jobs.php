@@ -43,6 +43,7 @@ if ($conn->connect_error) {
 
 // run SQL statement
 $result = mysqli_query($con,$sql);
+echo $result;
 
 // die if SQL statement failed
 if (!$result) {
